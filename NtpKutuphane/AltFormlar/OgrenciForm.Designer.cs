@@ -1,6 +1,7 @@
 ﻿namespace OgrenciEkleme
 {
     partial class OgrenciForm
+    
     {
         /// <summary>
         /// Required designer variable.
