@@ -33,14 +33,14 @@ namespace NtpKutuphane
 
         private void btnTur_Click(object sender, EventArgs e)
         {
-            formKitapTur kitapTur = new formKitapTur();
-            kitapTur.ShowDialog();
+            TurForm tur = new TurForm();
+            tur.ShowDialog();
         }
 
         private void btnOdunc_Click(object sender, EventArgs e)
         {
-            formOduncKitap oduncKitap = new formOduncKitap();
-            oduncKitap.ShowDialog();
+            OduncKitap duck = new OduncKitap();
+            duck.ShowDialog();
         }
     }
 }
