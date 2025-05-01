@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace NtpKutuphane.AltFormlar
 {
-    public partial class TurForm : Form
+    public partial class OduncKitap : Form
     {
-        public TurForm()
+        public OduncKitap()
         {
             InitializeComponent();
-            Turform_Load(this, EventArgs.Empty);
         }
     }
 }

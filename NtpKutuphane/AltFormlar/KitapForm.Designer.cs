@@ -1,6 +1,6 @@
 ﻿namespace NtpKutuphane.AltFormlar
 {
-    partial class OduncKitap
+    partial class KitapForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OduncKitap));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KitapForm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnSil = new System.Windows.Forms.Button();
@@ -40,9 +40,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboSinif = new System.Windows.Forms.ComboBox();
             this.txtNo = new System.Windows.Forms.TextBox();
+            this.txtAd = new System.Windows.Forms.TextBox();
+            this.txtSoyad = new System.Windows.Forms.TextBox();
+            this.comboCinsiyet = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -53,9 +57,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(10, 210);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 229);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(868, 307);
+            this.dataGridView1.Size = new System.Drawing.Size(922, 307);
             this.dataGridView1.TabIndex = 32;
             // 
             // groupBox3
@@ -63,9 +67,9 @@
             this.groupBox3.Controls.Add(this.btnSil);
             this.groupBox3.Controls.Add(this.btnGuncelle);
             this.groupBox3.Controls.Add(this.btnKaydet);
-            this.groupBox3.Location = new System.Drawing.Point(365, 104);
+            this.groupBox3.Location = new System.Drawing.Point(355, 123);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(491, 100);
+            this.groupBox3.Size = new System.Drawing.Size(569, 100);
             this.groupBox3.TabIndex = 31;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "İşlemler";
@@ -110,18 +114,18 @@
             // 
             this.groupBox2.Controls.Add(this.txtOgrenciAra);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Location = new System.Drawing.Point(25, 104);
+            this.groupBox2.Location = new System.Drawing.Point(12, 123);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(334, 100);
             this.groupBox2.TabIndex = 30;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Ödünç Kitap Arama";
+            this.groupBox2.Text = "Kitap Arama";
             // 
             // txtOgrenciAra
             // 
             this.txtOgrenciAra.Location = new System.Drawing.Point(92, 43);
             this.txtOgrenciAra.Name = "txtOgrenciAra";
-            this.txtOgrenciAra.Size = new System.Drawing.Size(211, 20);
+            this.txtOgrenciAra.Size = new System.Drawing.Size(151, 20);
             this.txtOgrenciAra.TabIndex = 19;
             // 
             // label7
@@ -129,21 +133,25 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(21, 46);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 13);
+            this.label7.Size = new System.Drawing.Size(52, 13);
             this.label7.TabIndex = 20;
-            this.label7.Text = "Öğrenci Adı:";
+            this.label7.Text = "Kitap Adı:";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.comboSinif);
             this.groupBox1.Controls.Add(this.txtNo);
+            this.groupBox1.Controls.Add(this.txtAd);
+            this.groupBox1.Controls.Add(this.txtSoyad);
+            this.groupBox1.Controls.Add(this.comboCinsiyet);
             this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(25, 4);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Location = new System.Drawing.Point(12, 23);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(855, 94);
+            this.groupBox1.Size = new System.Drawing.Size(912, 94);
             this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bilgi Giriş";
@@ -158,62 +166,97 @@
             "12"});
             this.comboSinif.Location = new System.Drawing.Point(138, 56);
             this.comboSinif.Name = "comboSinif";
-            this.comboSinif.Size = new System.Drawing.Size(180, 21);
+            this.comboSinif.Size = new System.Drawing.Size(151, 21);
             this.comboSinif.TabIndex = 17;
             // 
             // txtNo
             // 
             this.txtNo.Location = new System.Drawing.Point(138, 30);
             this.txtNo.Name = "txtNo";
-            this.txtNo.Size = new System.Drawing.Size(180, 20);
+            this.txtNo.Size = new System.Drawing.Size(151, 20);
             this.txtNo.TabIndex = 0;
+            // 
+            // txtAd
+            // 
+            this.txtAd.Location = new System.Drawing.Point(369, 33);
+            this.txtAd.Name = "txtAd";
+            this.txtAd.Size = new System.Drawing.Size(138, 20);
+            this.txtAd.TabIndex = 1;
+            // 
+            // txtSoyad
+            // 
+            this.txtSoyad.Location = new System.Drawing.Point(602, 33);
+            this.txtSoyad.Name = "txtSoyad";
+            this.txtSoyad.Size = new System.Drawing.Size(138, 20);
+            this.txtSoyad.TabIndex = 2;
+            // 
+            // comboCinsiyet
+            // 
+            this.comboCinsiyet.FormattingEnabled = true;
+            this.comboCinsiyet.Items.AddRange(new object[] {
+            "Kız",
+            "Erkek"});
+            this.comboCinsiyet.Location = new System.Drawing.Point(369, 58);
+            this.comboCinsiyet.Name = "comboCinsiyet";
+            this.comboCinsiyet.Size = new System.Drawing.Size(138, 21);
+            this.comboCinsiyet.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(83, 33);
+            this.label1.Location = new System.Drawing.Point(59, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
+            this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Okul No:";
+            this.label1.Text = "Kitap işlemleri:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(542, 36);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(54, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Yayın Evi:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(81, 59);
+            this.label2.Location = new System.Drawing.Point(102, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.Size = new System.Drawing.Size(26, 13);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Kitap adı:";
+            this.label2.Text = "Tür:";
             // 
-            // textBox1
+            // label4
             // 
-            this.textBox1.Location = new System.Drawing.Point(392, 26);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(190, 51);
-            this.textBox1.TabIndex = 18;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(296, 62);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Sayfa Sayısı:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(337, 29);
+            this.label3.Location = new System.Drawing.Point(326, 36);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 13);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Açıklama:";
+            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Yazar:";
             // 
-            // OduncKitap
+            // KitapForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 523);
+            this.ClientSize = new System.Drawing.Size(937, 539);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "OduncKitap";
-            this.Text = "OduncKitap";
+            this.Name = "KitapForm";
+            this.Text = "KitapForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -237,9 +280,13 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox comboSinif;
         private System.Windows.Forms.TextBox txtNo;
+        private System.Windows.Forms.TextBox txtAd;
+        private System.Windows.Forms.TextBox txtSoyad;
+        private System.Windows.Forms.ComboBox comboCinsiyet;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
     }
 }
