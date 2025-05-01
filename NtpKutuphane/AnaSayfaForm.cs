@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NtpKutuphane.AltFormlar;
 using OgrenciEkleme;
 
 namespace NtpKutuphane
@@ -20,7 +21,8 @@ namespace NtpKutuphane
 
         private void btnKitap_Click(object sender, EventArgs e)
         {
-            
+            KitapForm kitap = new KitapForm();
+            kitap.ShowDialog();
         }
 
         private void btnOgrenci_Click(object sender, EventArgs e)
